@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"time"
 
 	"github.com/caseymrm/menuet"
@@ -18,15 +17,6 @@ func menuItems() []menuet.MenuItem {
 		},
 		{
 			Text: fmt.Sprintf("UTC:    %s", utc.Format("Mon 15:04:05 MST")),
-		},
-		{
-			Type: menuet.Separator,
-		},
-		{
-			Text: "Quit",
-			Clicked: func() {
-				os.Exit(0)
-			},
 		},
 	}
 }
