@@ -17,7 +17,7 @@ func menuItems() []menuet.MenuItem {
 			Text: fmt.Sprintf("Local:  %s", now.Format("Mon 03:04:05 PM MST")),
 		},
 		{
-			Text: fmt.Sprintf("UTC:    %s", utc.Format("Mon 15:04:05 UTC")),
+			Text: fmt.Sprintf("UTC:    %s", utc.Format("Mon 15:04:05 MST")),
 		},
 		{
 			Type: menuet.Separator,
