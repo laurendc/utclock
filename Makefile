@@ -1,4 +1,4 @@
-.PHONY: build app run clean
+.PHONY: build app run clean build-linux install-linux
 
 BINARY  = utclock
 APP     = UTClock.app
@@ -14,6 +14,12 @@ app: build
 	open $(APP)
 
 run: app
+
+build-linux:
+	GOOS=linux go build -o $(BINARY) .
+
+install-linux: build-linux
+	install -m755 $(BINARY) ~/.local/bin/$(BINARY)
 
 clean:
 	rm -rf $(BINARY) $(APP)
